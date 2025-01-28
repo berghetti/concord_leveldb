@@ -13,7 +13,7 @@ CXX_FLAGS := -emit-llvm -g -S -O3 -I. -I./include -pthread -DOS_LINUX -DLEVELDB_
 
 ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
-CONCORD_MAIN=$(ROOT_DIR)/../../../src
+CONCORD_MAIN=$(ROOT_DIR)/../../deps/concord/src/
 
 CONCORD_PASS=$(CONCORD_MAIN)/cache-line-pass/build/src/libConcordPass.so
 RDTSC_PASS=$(CONCORD_MAIN)/rdtsc-pass/build/src/libConcordPass.so
