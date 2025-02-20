@@ -35,8 +35,8 @@
 #include "util/logging.h"
 #include "util/mutexlock.h"
 
-void concord_enable(void);
-void concord_disable(void);
+void concord_enable();
+void concord_disable();
 
 namespace leveldb {
 

@@ -8,8 +8,8 @@
 #include "port/port.h"
 #include "port/thread_annotations.h"
 
-void concord_enable(void);
-void concord_disable(void);
+void concord_enable();
+void concord_disable();
 
 namespace leveldb {
 
