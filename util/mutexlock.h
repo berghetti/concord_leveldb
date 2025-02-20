@@ -8,6 +8,9 @@
 #include "port/port.h"
 #include "port/thread_annotations.h"
 
+void concord_enable(void);
+void concord_disable(void);
+
 namespace leveldb {
 
 // Helper class that locks a mutex on construction and unlocks the mutex when
