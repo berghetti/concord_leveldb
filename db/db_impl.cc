@@ -1082,6 +1082,7 @@ static void CleanupIteratorState(void* arg1, void* arg2) {
 Iterator* DBImpl::NewInternalIterator(const ReadOptions& options,
                                       SequenceNumber* latest_snapshot,
                                       uint32_t* seed) {
+  concord_disable();
   mutex_.Lock();
   *latest_snapshot = versions_->LastSequence();
 
@@ -1103,6 +1104,7 @@ Iterator* DBImpl::NewInternalIterator(const ReadOptions& options,
 
   *seed = ++seed_;
   mutex_.Unlock();
+   concord_enable();
   return internal_iter;
 }
 
