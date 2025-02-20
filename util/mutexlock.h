@@ -8,8 +8,15 @@
 #include "port/port.h"
 #include "port/thread_annotations.h"
 
+
+#ifdef __cplusplus
+extern "C"{
+#endif
 void concord_enable();
 void concord_disable();
+#ifdef __cplusplus
+}
+#endif
 
 namespace leveldb {
 

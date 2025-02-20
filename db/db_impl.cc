@@ -35,8 +35,14 @@
 #include "util/logging.h"
 #include "util/mutexlock.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
 void concord_enable();
 void concord_disable();
+#ifdef __cplusplus
+}
+#endif
 
 namespace leveldb {
 
